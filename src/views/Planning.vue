@@ -19,7 +19,7 @@
           <div
               class="determinate"
               :class="[cat.progressColor]"
-              :style="{ width: cat.progressPercent + '%' }"
+              :style="{ width: cat.progressPercent100 + '%' }"
           ></div>
         </div>
       </div>
@@ -53,6 +53,7 @@ export default {
 
       const percent = 100 * spend / cat.limit
       const progressPercent = percent > 100 ? 100 : percent
+      const progressPercent100 = progressPercent * 100
       const progressColor = percent < 60
         ? 'green'
         : percent < 100
@@ -64,7 +65,7 @@ export default {
 
       return {
         ...cat,
-        progressPercent,
+        progressPercent100,
         progressColor,
         spend,
         tooltip
