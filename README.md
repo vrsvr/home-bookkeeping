@@ -1,4 +1,4 @@
-# home-bookkeeping
+# Домашняя бухгалтерия на VueJS
 
 ## Project setup
 ```
